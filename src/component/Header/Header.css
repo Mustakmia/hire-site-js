@@ -1,0 +1,11 @@
+.a-hover a:hover{
+background-color: rgb(39, 37, 35);
+}
+.title{
+    text-align: center;
+    background-color: lightgrey;
+    padding: 5px;
+}
+.members{
+    color: orange;
+}
