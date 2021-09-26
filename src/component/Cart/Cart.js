@@ -13,17 +13,10 @@ const Cart = (props) => {
 
     return (
         <div>
-            <h3><i className="fas fa-shopping-cart"></i>
-                {selaries.length}
+            <h3>
+                Team Member: {selaries.length}
             </h3>
-            <h2>{total}</h2>
-
-
-            <ul>
-                {/* {
-                    cart.map(TeamMember => <li>{TeamMember.name}</li>)
-                } */}
-            </ul>
+            <h2>Salary:{total}</h2>
         </div>
     );
 };

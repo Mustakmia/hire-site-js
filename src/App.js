@@ -18,3 +18,4 @@ function App() {
 }
 
 export default App;
+// procor jor matha betha niye ata koreci img & icon add korar somoy payne tai number somvob hole full diyen onek sopno niye aceci apnader kace
