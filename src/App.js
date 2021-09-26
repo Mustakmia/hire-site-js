@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header/Header';
 import MyTeams from './component/MyTeams/MyTeams';
@@ -12,6 +11,7 @@ function App() {
         <h5>You Can Hire For Creating Any Dynamic Web-Site</h5>
         <h2>Total <span className="members">Members</span> 20</h2>
       </div>
+
       <MyTeams></MyTeams>
     </div>
   );

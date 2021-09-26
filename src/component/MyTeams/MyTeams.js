@@ -1,50 +1,47 @@
 import './MyTeams.css';
 import React, { useEffect, useState } from 'react';
+import Cart from "../Cart/Cart";
 import TeamMember from '../TeamMember/TeamMember';
 
+
 const MyTeams = () => {
-    const [TeamMember, setTeamMember] = useState([]);
+    const [TeamMembers, setTeamMembers] = useState([]);
     const [cart, setCart] = useState([]);
-    const handleAddMember = (MyTeams) => {
-        const newMember = [...member, MyTeams]
-        setMember(newMember)
+
+    const addMe = (selaly) => {
+        const newCart = [...cart, selaly]
+        setCart(newCart)
     }
     useEffect(() => {
-        fetch('')
+        fetch("TeamDb.json")
             .then(res => res.json())
-            .then(data => console.log(data));
+            .then(data => setTeamMembers(data));
 
     }, []);
+
+
 
     return (
         <div>
             <div className="row">
                 <div className="col-md-9">
-                    {
 
-                    }
+                    <div className="card-style">
 
-                    <div className="row">
                         {
-                            TeamMember.map(TeamMember =>
-                                <TeamMember
-                                    MyTeam={TeamMember}
-                                    handleAddTeamMember={handleAddMember}
-                                >
 
-                                </TeamMember>)
+                            TeamMembers.map(member => <TeamMember
+                                member={member}
+                                addMe={addMe}
+                            ></TeamMember>)
                         }
 
 
                     </div>
                 </div>
                 <div className="col-md-3">
-                    {/* ekhane amra cart calculation korbo */}
-                    <member
-                        cart={member}
-                    >
-
-                    </member>
+                    <Cart cart={cart} >
+                    </Cart>
                 </div>
             </div>
         </div>
