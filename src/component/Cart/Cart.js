@@ -13,8 +13,8 @@ const Cart = (props) => {
 
     return (
         <div>
-            <h3>
-                Team Member: {selaries.length}
+            < h3>
+                <i className="fas fa-shopping-cart"></i> Team Member: {selaries.length}
             </h3>
             <h2>Salary:{total}</h2>
         </div>
